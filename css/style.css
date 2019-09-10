@@ -5,9 +5,12 @@
 }
 
 .cabecera {
+    top: 0;
     width: 100%;
     height: 110px;
     background-color: #242323;
+    position: fixed;
+    z-index: 1;
 }
 
 .anchocabecera {
@@ -15,12 +18,43 @@
     height: 110px;
     margin: 0 auto;
     background-color: red;
+    display: flex;
+}
+
+.imagen-principal {
+    flex: 33%;
+    height: 110px;
+    background-color: blue;
+}
+
+.buscador {
+    background-color: yellow;
+    flex: 33%;
+    height: 110px;
+}
+
+.buscador select,
+.buscador input {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacto {
+    background-color: green;
+    flex: 33%;
+    height: 110px;
 }
 
 .navegador {
     background-color: #282828;
+    top: 0;
     width: 100%;
     height: 50px;
+    margin-top: 110px;
+    position: fixed;
+    z-index: 2;
 }
 
 .anchonavegador {
@@ -30,11 +64,56 @@
     background-color: orange;
 }
 
-.navegador ul li {
-    color: white;
-    list-style: none;
+.anchonavegador ul {
+    position: relative;
+    left: 50%;
+    float: left;
 }
 
-.navegador ul li a {
+.anchonavegador ul li {
+    color: white;
+    list-style: none;
+    float: left;
+    position: relative;
+    right: 50%;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+.anchonavegador ul li a {
     text-decoration: none;
+    color: white;
+}
+
+.imagen-slider {
+    margin-top: 160px;
+    width: 100%;
+    height: 400px;
+    background-color: blue;
+}
+
+.peliculas {
+    width: 100%;
+    height: 400px;
+    background-color: red;
+}
+
+.listapeliculas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.pelicula-info {
+    flex: 20%;
+    border: 1px solid black;
+    width: 20%;
+    height: 300px;
+    background-color: green;
+}
+
+.pie {
+    width: 100%;
+    height: 150px;
+    background-color: black;
 }
