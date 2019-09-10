@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cabecera {
+    width: 100%;
+    height: 110px;
+    background-color: #242323;
+}
+
+.anchocabecera {
+    width: 50%;
+    height: 110px;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.navegador {
+    background-color: #282828;
+    width: 100%;
+    height: 50px;
+}
+
+.anchonavegador {
+    margin: 0 auto;
+    height: 50px;
+    width: 75%;
+    background-color: orange;
+}
+
+.navegador ul li {
+    color: white;
+    list-style: none;
+}
+
+.navegador ul li a {
+    text-decoration: none;
+}
