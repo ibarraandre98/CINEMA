@@ -82,7 +82,7 @@
     background-color: #282828;
     top: 0;
     width: 100%;
-    height: 50px;
+    height: auto;
     margin-top: 110px;
     position: fixed;
     z-index: 2;
@@ -174,14 +174,14 @@
 
 .listapeliculas {
     width: 100%;
-    height: 500px;
+    height: 450px;
     display: flex;
     flex-direction: row;
 }
 
 .pelicula-info {
     flex: 20%;
-    height: 330px;
+    height: 350px;
     background-color: whitesmoke;
     text-align: justify;
     padding: 20px;
@@ -192,8 +192,60 @@
     height: 250px;
 }
 
+.pelicula-info p {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .pie {
     width: 100%;
-    height: 150px;
+    height: 175px;
     background-color: black;
+    color: white;
+}
+
+.pie-padre {
+    margin: 0 auto;
+    background-color: black;
+    width: 70%;
+    height: 175px;
+    display: flex;
+}
+
+.pie-izquierda {
+    flex: 33%;
+}
+
+.pie-izquierda h2 {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pie-izquierda p {
+    margin: 30px;
+}
+
+.pie-centro {
+    flex: 33%;
+}
+
+.pie-derecha {
+    padding: 30px;
+    flex: 33%;
+    text-align: center;
+}
+
+.pie-derecha ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.pie-derecha a {
+    margin: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.pie-derecha a:hover {
+    color: purple;
 }
