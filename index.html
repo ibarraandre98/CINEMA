@@ -4,22 +4,23 @@
 <head>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <title>Pagina web cine</title>
+    <title>Rio Cinemas</title>
 </head>
 
 <body>
     <div class="cabecera">
         <div class="anchocabecera">
             <div class="imagen-principal">
-                <img src="">
+                <img class="logo" src="/img/logo.png">
             </div>
             <div class="buscador">
                 <select>
-                    <option>Andre</option>
-                    <option>Andre</option>
-                    <option>Andre</option>
+                    <option>Selecciona tu cine</option>
+                    <option>Cuauhtemoc (Monterrey, NL)</option>
+                    <option>Gem Plaza (Monterrey, NL)</option>
+                    <option>Alameda (Saltillo, Coah.)</option>
                 </select>
-                <input type="button" value="Ver cartelera">
+                <input type="button" value="Ver cartelera" onclick="before">
             </div>
             <div class="contacto">
                 <input type="button" value="Contacto">
@@ -54,40 +55,84 @@
         </div>
     </nav>
     <div class="imagen-slider">
+        <div id="banners">
+            <img class="imagenes-banners" src="img/banners/angrybirds.png">
 
+
+        </div>
+        <div class="botonesSigAnt">
+            <button class="b-anterior" onclick="beforeImage()">-</button>
+            <button class="b-siguiente" onclick="nextImage()">+</button>
+        </div>
+        <script>
+            var slider_content = document.getElementById('banners');
+
+            var image = ["angrybirds", "comosifueralaprimeravez", "habiaunavezenhollywood", "historiasmiedo", "it", "angrybirds"];
+
+            var i = image.length;
+
+            function nextImage() {
+                if (i < image.length) {
+                    i = i + 1;
+                    if (i == image.length) {
+                        i = 1;
+                    }
+                } else {
+                    i = 1;
+                }
+                slider_content.innerHTML = "<img class=\"imagenes-banners\" src=\"img/banners/" + image[i] + ".png\">";
+            }
+
+            function beforeImage() {
+                if (i < image.length + 1 && i > 1) {
+                    i = i - 1;
+                } else {
+                    i = image.length;
+                }
+                slider_content.innerHTML = "<img class=\"imagenes-banners\" src=img/banners/" + image[i - 1] + ".png>";
+            }
+        </script>
     </div>
+
+
     <div class="peliculas">
         <h2>Películas</h2>
         <div class="listapeliculas">
             <div class="pelicula-info">
-                <img src="">
-                <p>Nombre: </p>
-                <p>Duración: </p>
-                <p>Genero: </p>
+                <img src="img/peliculas/angrybirds.jpg">
+                <p>Nombre: Angry Birds </p>
+                <p>Duración: 120 min </p>
+                <p>Genero: Animada </p>
             </div>
             <div class="pelicula-info">
-                <img src="">
-                <p>Nombre: </p>
-                <p>Duración: </p>
-                <p>Genero: </p>
+                <img src="img/peliculas/dora.jpg">
+                <p>Nombre: Dora la exploradora</p>
+                <p>Duración: 120 min </p>
+                <p>Genero: Live action</p>
             </div>
             <div class="pelicula-info">
-                <img src="">
-                <p>Nombre: </p>
-                <p>Duración: </p>
-                <p>Genero: </p>
+                <img src="img/peliculas/historias.jpg">
+                <p>Nombre: Historias de miedo para contar en la oscuridad </p>
+                <p>Duración: 120 min</p>
+                <p>Genero: Terror </p>
             </div>
             <div class="pelicula-info">
-                <img src="">
-                <p>Nombre: </p>
-                <p>Duración: </p>
-                <p>Genero: </p>
+                <img src="img/peliculas/it.jpg">
+                <p>Nombre: IT 2 </p>
+                <p>Duración: 120 min</p>
+                <p>Genero: Terror </p>
             </div>
             <div class="pelicula-info">
-                <img src="">
-                <p>Nombre: </p>
-                <p>Duración: </p>
-                <p>Genero: </p>
+                <img src="img/peliculas/vidasecreta.jpg">
+                <p>Nombre: La vida secreta de tus mascotas </p>
+                <p>Duración: 120 min</p>
+                <p>Genero: Animada </p>
+            </div>
+            <div class="pelicula-info">
+                <img src="img/peliculas/agente.jpg">
+                <p>Nombre: Agente bajo fuego </p>
+                <p>Duración: 120 min</p>
+                <p>Genero: Animada </p>
             </div>
         </div>
     </div>
@@ -95,6 +140,9 @@
     <div class="pie">
 
     </div>
+    <script>
+        setInterval('nextImage()', 5000);
+    </script>
 </body>
 
 </html>
