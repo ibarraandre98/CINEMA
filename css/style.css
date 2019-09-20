@@ -7,7 +7,7 @@
 .cabecera {
     top: 0;
     width: 100%;
-    height: 110px;
+    height: 90px;
     background-color: #242323;
     position: fixed;
     z-index: 1;
@@ -15,7 +15,7 @@
 
 .anchocabecera {
     width: 50%;
-    height: 110px;
+    height: 90px;
     margin: 0 auto;
     display: flex;
 }
@@ -27,17 +27,17 @@
 
 .logo {
     margin: 10px;
-    height: auto;
+    height: 70px;
 }
 
 .buscador {
     flex: 49%;
-    height: 110px;
+    height: 90px;
     float: left;
 }
 
 .buscador select {
-    margin-top: 45px;
+    margin-top: 30px;
     border-radius: 5px;
     background-color: whitesmoke;
     border: 1px solid gray;
@@ -60,7 +60,7 @@
 }
 
 .contacto {
-    margin-top: 45px;
+    margin-top: 29px;
     flex: 15%;
     height: 110px;
 }
@@ -83,7 +83,7 @@
     top: 0;
     width: 100%;
     height: auto;
-    margin-top: 110px;
+    margin-top: 90px;
     position: fixed;
     z-index: 2;
 }
@@ -118,10 +118,11 @@
 
 .anchonavegador ul li a:hover {
     color: rgb(255, 255, 0);
+    transition: .4s;
 }
 
 .imagen-slider {
-    margin-top: 160px;
+    margin-top: 140px;
     width: 100%;
     height: 400px;
 }
@@ -200,13 +201,15 @@
 .pie {
     width: 100%;
     height: 175px;
-    background-color: black;
+    background-color: #282828;
+    ;
     color: white;
 }
 
 .pie-padre {
     margin: 0 auto;
-    background-color: black;
+    background-color: #282828;
+    ;
     width: 70%;
     height: 175px;
     display: flex;
